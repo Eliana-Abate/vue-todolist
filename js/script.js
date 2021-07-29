@@ -12,5 +12,12 @@ const root = new Vue ({
             'Caricare batteria della macchina fotografica',
             'Fare la spesa',
         ],
+    },
+
+    methods: {
+        deleteTask(i) {
+            this.taskList.splice(i, 1);
+        }
+
     }
 });
