@@ -18,8 +18,16 @@
         <main class="container w-50">
             <div class="row py-5">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Non dimentichi nient'altro?">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
+
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="Non dimentichi nient'altro?"
+                    v-model="newItem"
+                    >
+
+                    <button class="btn btn-outline-primary" type="button" id="button-addon2" v-on:click="addTask">Aggiungi</button>
+
                 </div>
             </div>
 

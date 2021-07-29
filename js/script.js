@@ -5,6 +5,7 @@ console.log ('collegato', Vue);
 const root = new Vue ({
     el: '#root',
     data: {
+        newItem: '',
         taskList: [
             'Organizzare il viaggio',
             'Cambiare data del volo',
@@ -17,7 +18,13 @@ const root = new Vue ({
     methods: {
         deleteTask(i) {
             this.taskList.splice(i, 1);
+        }, 
+
+        addTask() {
+            this.taskList.push(this.newItem);
         }
+
+    
 
     }
 });
