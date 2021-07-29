@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue ToDoList</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
@@ -47,7 +48,18 @@
 
             <div class="row py-5 justify-content-evenly">
                 <button type="button" class="btn btn-dark w-25" v-on:click="printingAlert">Stampa</button>
-                <button type="button" class="btn btn-primary w-25">Condividi</button>
+                <button type="button" class="btn btn-primary w-25" v-on:click="showIcons">Condividi</button>
+            </div>
+
+            <div id="shareBtn" class="row text-center pt-3 hidden">
+                <h5>Seleziona come condividere la lista:</h5>
+
+                <div class="d-flex justify-content-evenly py-3">
+                    <button type="button" class="btn btn-success w-25"><i class="fab fa-whatsapp fa-2x"></i></button>
+                    <button type="button" class="btn btn-danger w-25"><i class="fab fa-google-plus fa-2x"></i></button>
+                    <button type="button" class="btn btn-primary w-25"><i class="fab fa-telegram fa-2x"></i></button>
+                </div>
+             
             </div>
         </main>
     </div>

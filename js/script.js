@@ -38,5 +38,10 @@ const root = new Vue ({
                 alert('Ops! La lista è vuota!');
             }
         },
+
+        showIcons() {
+            const shareBtn = document.getElementById('shareBtn');
+            shareBtn.classList.remove('hidden');
+        }
     }
 });
