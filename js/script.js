@@ -21,9 +21,12 @@ const root = new Vue ({
         }, 
 
         addTask() {
-            if (this.newItem && this.newItem.trim() !== '') {
-                this.taskList.push(this.newItem);
-            } 
+            let word = this.newItem.charAt(0).toUpperCase() + this.newItem.slice(1);
+            if (word && word.trim() !== '' && !this.taskList.includes(word)) {
+                this.taskList.push(word);
+            } else {
+                alert('Hai inserito un valore non valido o già presente');
+            }
             
             this.newItem = '';
         }
