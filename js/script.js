@@ -5,7 +5,7 @@ console.log ('collegato', Vue);
 const root = new Vue ({
     el: '#root',
     data: {
-        taskList = [
+        taskList: [
             'Organizzare il viaggio',
             'Cambiare data del volo',
             'Fare la valigia',
