@@ -35,13 +35,17 @@ const root = new Vue ({
             if (this.taskList.length) {
                 alert('Stampa in corso...');
             } else {
-                alert('Ops! La lista è vuota!');
+                alert('Ops...nulla da stampare! Aggiungi qualcosa alla lista!');
             }
         },
 
         showIcons() {
-            const shareBtn = document.getElementById('shareBtn');
-            shareBtn.classList.remove('hidden');
+            if (this.taskList.length) {
+                const shareBtn = document.getElementById('shareBtn');
+                shareBtn.classList.remove('hidden');
+            } else {
+                alert('Nulla da condividere! La lista è vuota!');
+            }
         }
     }
 });
