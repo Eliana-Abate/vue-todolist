@@ -21,10 +21,11 @@ const root = new Vue ({
         }, 
 
         addTask() {
-            this.taskList.push(this.newItem);
+            if (this.newItem && this.newItem.trim() !== '') {
+                this.taskList.push(this.newItem);
+            } 
+            
+            this.newItem = '';
         }
-
-    
-
     }
 });
