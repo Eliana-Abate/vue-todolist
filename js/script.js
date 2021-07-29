@@ -29,6 +29,10 @@ const root = new Vue ({
             }
             
             this.newItem = '';
-        }
+        },
+
+        printingAlert() {
+            alert('Stampa in corso');
+        },
     }
 });
