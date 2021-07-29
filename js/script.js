@@ -32,7 +32,11 @@ const root = new Vue ({
         },
 
         printingAlert() {
-            alert('Stampa in corso');
+            if (this.taskList.length) {
+                alert('Stampa in corso...');
+            } else {
+                alert('Ops! La lista è vuota!');
+            }
         },
     }
 });
