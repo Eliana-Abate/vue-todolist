@@ -15,10 +15,14 @@
             <h1 class="text-center py-5">TODO-LIST</h1>
         </header>
     
-        <main class="container">
+        <main class="container w-50">
             <div class="row py-5">
-                <ul class="list-group w-50">
-                    <li class="list-group-item d-flex justify-content-between">Test
+                <ul class="list-group">
+                    <li 
+                    v-for="(item, index) in taskList"
+                    class="list-group-item d-flex justify-content-between"
+                    >
+                        {{item}}
             
                         <button type="button" class="btn-close" aria-label="Close"></button>
             
