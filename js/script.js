@@ -57,8 +57,8 @@ const root = new Vue ({
             if(!this.searchTerm || this.searchTerm.trim() === ''){
                 return true;
             }
-            const filter = this.searchTerm.trim().charAt(0).toUpperCase() + this.searchTerm.slice(1);
-            task = task.trim().charAt(0).toUpperCase() + task.slice(1);
+            const filter = this.searchTerm.trim().toUpperCase();
+            task = task.trim().toUpperCase();
             return task.includes(filter);
         }
     }
