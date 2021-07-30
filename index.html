@@ -20,7 +20,7 @@
             <div class="row py-5 justify-content-center" v-if="taskList.length">
                 <div class="col-12 col-md-8 col-lg-6">
                     <div class="input-group">
-                        <input type="text" class="form-control fst-italic" placeholder="Cerca nella lista...">
+                        <input type="text" class="form-control" placeholder="Cerca nella lista..." v-model="searchTerm">
                         <span class="input-group-text"><i class="fas fa-search"></i></span>
                     </div>
                 </div>
@@ -31,6 +31,7 @@
                     <ul class="list-group">
                         <li 
                         v-for="(item, index) in taskList"
+                        v-if="showItem(item)"
                         class="list-group-item d-flex justify-content-between align-items-center"
                         >
                             {{item}}

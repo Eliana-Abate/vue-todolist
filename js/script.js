@@ -6,6 +6,7 @@ const root = new Vue ({
     el: '#root',
     data: {
         newItem: '',
+        searchTerm: '',
         taskList: [
             'Organizzare il viaggio',
             'Cambiare data del volo',
@@ -50,6 +51,15 @@ const root = new Vue ({
             } else {
                 alert('Nulla da condividere! La lista è vuota!');
             }
+        }, 
+
+        showItem(task){
+            if(!this.searchTerm || this.searchTerm.trim() === ''){
+                return true;
+            }
+            const filter = this.searchTerm.trim().charAt(0).toUpperCase() + this.searchTerm.slice(1);
+            task = task.trim().charAt(0).toUpperCase() + task.slice(1);
+            return task.includes(filter);
         }
     }
 });
