@@ -26,6 +26,7 @@
                         class="form-control" 
                         placeholder="Non dimentichi nient'altro?"
                         v-model="newItem"
+                        @keyup.enter="addTask"
                         >
     
                         <button class="btn btn-outline-primary" type="button" id="button-addon2" v-on:click="addTask">Aggiungi</button>
