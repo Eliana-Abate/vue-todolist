@@ -31,6 +31,10 @@ const root = new Vue ({
             this.newItem = '';
         },
 
+        cleanInput() {
+            this.newItem = '';
+        },
+
         printingAlert() {
             if (this.taskList.length) {
                 alert('Stampa in corso...');

@@ -47,7 +47,7 @@
                                 >
 
                                 <button class="btn btn-primary" type="button" id="button-addon2" v-on:click="addTask">Add<i class="ms-3 me-2 fas fa-plus"></i></button>
-                                <button type="button" class="btn btn-dark btn-lg"><i class="fas fa-backspace"></i></button>
+                                <button type="button" class="btn btn-dark btn-lg" v-on:click="cleanInput" @keyup.esc="cleanInput" ><i class="fas fa-backspace"></i></button>
                             </div>         
                         </li>
                     </ul>
